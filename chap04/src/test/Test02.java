@@ -13,6 +13,21 @@ package test;
      '1' : 49 => 21
      ('1'-'0')+20 = 21
      ('5'-'0')+20 = 25
+ [결과]
+ 문자한개를 입력하세요
+ A
+ A:a    
+
+ [결과]
+ 문자한개를 입력하세요
+ d
+ d:D    
+
+ [결과]
+ 문자한개를 입력하세요
+ 5
+ 5:25    
+
 */
 public class Test02 {
 	public static void main(String[] args) {
