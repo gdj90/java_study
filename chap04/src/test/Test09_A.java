@@ -18,12 +18,13 @@ public class Test09_A {
 		if (num < 1) {
 			System.out.println("잘못 입력하셨습니다.");
 		} else {
-			int sum = 0;
+			int sum = 0; //변수의 선언.  else 구문 내에서만 사용이 가능한 지역변수
 			for(int i=1;i<=num;i++) {
 				System.out.print(i + ((i==num)?" = ":" + "));
 				sum += i;
 			}
 			System.out.println(sum);
 		}
+//		System.out.println(sum);
 	}
 }

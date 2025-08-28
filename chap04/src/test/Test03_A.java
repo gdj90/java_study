@@ -7,10 +7,11 @@ import java.util.Scanner;
   [결과]
   삼각형의 높이
   3
-  
-   *
-  ***
- *****  바닦의 * 갯수 => h * 2 - 1
+        i   j
+   *    0   3     =>  m-i, m+i 
+  ***   1   2 3 4 =>  m-1, m+1
+ *****  2   1 2 3 4 5 => m-2,m+2
+  바닦의 * 갯수 => h * 2 - 1
 */
 public class Test03_A {
 	public static void main(String[] args) {
@@ -28,6 +29,5 @@ public class Test03_A {
 		   }
 		   System.out.println();
 		}
-		
 	}
 }
