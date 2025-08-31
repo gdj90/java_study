@@ -12,8 +12,6 @@ package test;
  * 1원  : 1개
  */
 public class Test01 {
-
 	public static void main(String[] args) {
 	}
-
 }
