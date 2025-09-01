@@ -9,7 +9,16 @@ Heart:1(50,80)
 Spade:1(50,80)
 */
 
-public class Test01 {
+class Card {
+	String kind;
+	int number = 1;
+	static int width = 100;
+	static int height = 250;
+	public String toString() {
+		return kind + ":" + number + "(" + width + "," + height + ")";
+	}
+}
+public class Test01_A {
 	public static void main(String[] args) {
 		 Card card1 = new Card();
 		 card1.kind = "Heart";
