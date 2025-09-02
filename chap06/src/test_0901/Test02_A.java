@@ -9,10 +9,9 @@ package test_0901;
      나이(age):20
      맛있게 얌얌   
 */
-
 public class Test02_A {
 	public static void main(String[] args) {
-		Animal a = new Animal();
+		Animal a = new Animal(); //객체화 
 		a.name="원숭이";
 		a.age = 20;
 		System.out.println(a);

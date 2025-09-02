@@ -9,7 +9,12 @@ package test_0901;
 class Coin {
 	int side;
 	void flip() {
-		side = (int)(Math.random() * 2);
+		side = (int)(Math.random() * 2); //0또는1 중 임의의 수
+		/*
+		 * 0.0 <= Math.random() < 1.0 
+		 * 0.0 <= Math.random() * 2 < 2.0 
+		 * 0 <= (int)(Math.random() * 2) <= 1 
+		 */
 	}
 }
 public class Test03_A {

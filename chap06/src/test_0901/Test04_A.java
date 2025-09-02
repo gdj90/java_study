@@ -30,9 +30,18 @@ public class Test04_A {
 		int[][] result = new int[score.length + 1][score[0].length + 1];
 		for (int i = 0; i < score.length; i++) {
 			for (int j = 0; j < score[i].length; j++) {
+				//score 배열의 요소들을 result배열에 복사
 				result[i][j] = score[i][j];
+				//각행의 마지막 열. 
+				//score[i].length : result 배열의 마지막 컬럼 인덱스값
+				//각 행의 합을 저장
 				result[i][score[i].length] += score[i][j];
+				//result[score.length] : result 배열의 마지막 행
+				//각 열의 합을 저장
 				result[score.length][j] += score[i][j];
+				//score.length : 5
+				//score[i].length : 3
+				//result[5][3] => 6번째 행, 4번째 열 => 가장 마지막 셀값
 				result[score.length][score[i].length] += score[i][j];
 			}
 		}

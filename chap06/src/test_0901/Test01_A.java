@@ -8,12 +8,11 @@ Spade:1(100,250)
 Heart:1(50,80)
 Spade:1(50,80)
 */
-
 class Card {
-	String kind;
-	int number = 1;
-	static int width = 100;
-	static int height = 250;
+	String kind;  //인스턴스변수
+	int number;   //인스턴스변수
+	static int width=100; //클래스변수
+	static int height=250; //클래스변수
 	public String toString() {
 		return kind + ":" + number + "(" + width + "," + height + ")";
 	}
