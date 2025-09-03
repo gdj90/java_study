@@ -23,7 +23,7 @@ package test_0902;
  */
 class School {
 	String name;
-	Student2 students[];
+	Student2[] students;
 }
 class Student2 {
 	String name,stuNo;
@@ -37,12 +37,12 @@ class Score {
 public class Test02_A {
 	public static void main(String[] args) {
 		// School 객체 생성
-		School school = new School();
+		School school = new School(); //School 클래스의 객체 생성하기
 		school.name = "구디초";
-		school.students = new Student2[3];
+		school.students = new Student2[3]; //Student2클래스 참조변수 배열 정의
 		for(int i = 0; i < school.students.length; i++) {
 			// Student 객체 생성
-			school.students[i] = new Student2();
+			school.students[i] = new Student2(); //Student2 클래스의 객체 생성
 			school.students[i].name = "정숙";
 			school.students[i].stuNo = "10101";
 			// Score 객체 생성

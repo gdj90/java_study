@@ -36,6 +36,5 @@ public class Test01_A {
 		s1.math = 85;
 		System.out.println(s1.getTotal());
 		System.out.println(s1.getAverage());
-
 	}
 }

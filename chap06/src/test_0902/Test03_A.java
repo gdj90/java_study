@@ -19,7 +19,7 @@ public class Test03_A {
 		int mycount = 0, youcount = 0;
 		System.out.println("myCoin\tyouCoin");
 		while(true){ 
-			myCoin.flip();
+			myCoin.flip(); //Coin객체의 side 값을 변경 기능
 			youCoin.flip();
 			if(myCoin.side == 0){
 				System.out.print("앞면\t");
@@ -36,7 +36,7 @@ public class Test03_A {
 				youcount = 0;
 			}			
 			if(mycount == 3 || youcount == 3)
-				break;
+				break;  //while 구문 빠짐
 		}
 		if(mycount > youcount)
 			System.out.println("myCoin 승리");
@@ -44,6 +44,5 @@ public class Test03_A {
 			System.out.println("youCoin 승리");
 		else
 			System.out.println("비김");
-
 	}
 }
