@@ -26,8 +26,57 @@ package test0903;
 */
 
 import java.util.Date;
+class Employee {
+	String type,name,address,dept;
+	Employee(String type, String name, String address, String dept) {
+		this.type = type;
+		this.name = name;
+		this.address = address;
+		this.dept =dept;
+	}
+	public String toString() {
+		return type+":이름="+name+", 주소="+address + ",부서="+dept;
+	}
+}
+class FormalEmployee extends Employee {
+	String empNo;
+	String position;
+	int salary;
+	FormalEmployee (String name, String address, 
+			String dept, String empNo,int salary,String position ) {
+		super("정규직",name,address,dept); //Employee 생성자 호출
+		this.empNo = empNo;
+		this.salary = salary;
+		this.position = position;		
+	}
+	int getPay() {
+		return salary/12;
+	}
+	public String toString() {
+		return super.toString()+
+				",직원번호="+empNo+",직급="+position+",연봉="+salary;
+	}
+}
+class InformalEmployee extends Employee {
+	Date expireDate;
+	int primaryPay;
+	InformalEmployee(String name, String address, String dept,
+			Date expireDate,int primaryPay){
+		super("비정규직",name,address,dept);
+		this.expireDate = expireDate;
+		this.primaryPay = primaryPay;
+	}
+	int getPay() {
+		return primaryPay;
+	}
+	public String toString() {
+		return super.toString()+
+				",계약만료일="+expireDate+",기본입금="+primaryPay;
+	}
+}
 
-public class Test05 {
+
+public class Test05_A {
 	public static void main(String[] args) {
 		//정규직원 객체 생성
 		  FormalEmployee fe = new FormalEmployee
