@@ -57,14 +57,14 @@ public class Test01 {
 	public static void main(String ... args) {
 		Apple apple = new Apple(1000,10.5);//가격, 당도(brix)
 		Peach peach = new Peach(1000,13.5);//가격, 당도(brix)
-		Cock cock = new Cock(500,500);   //가격, 용량(ml)
-		Sidar sidar = new Sidar(1500,1000);//가격, 용량(ml)
+		Cock coke = new Cock(500,500);   //가격, 용량(ml)
+		Sidar cidar = new Sidar(1500,1000);//가격, 용량(ml)
 		Biscuit bis = new Biscuit(10000,500);//가격, 무게(gram)
 		Cookie cookie = new Cookie(500,5000);//가격, 무게(gram)
 		
 		Buyer b = new Buyer();
 		b.buy(apple);		b.buy(peach);
-		b.buy(cock);		b.buy(sidar);
+		b.buy(coke);		b.buy(cidar);
 		b.buy(bis);  		b.buy(cookie);
 		System.out.println("고객 잔액:" + b.money);
 		System.out.println("고객 포인트:" + b.point);
