@@ -88,6 +88,8 @@ public class Test05_A {
 		  System.out.println(fe.name + "의 급여 : " +   fe.getPay());
 
 		  Date expireDate = new Date(); //현재날짜 시간.
+		  //expireDate.getTime() : 1970년 시작부터 현재까지 시간을 밀리초로 리턴
+		  //expireDate.setTime(long) : 시간설정. 2년 이후의 일자로 설정
 		  expireDate.setTime(expireDate.getTime() +
 				   (1000L * 60 * 60 * 24 * 365 * 2));
 		  InformalEmployee ie = new InformalEmployee
