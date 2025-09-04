@@ -37,30 +37,34 @@ flip 후 뒷면 동전의 갯수 :6
  */
 
 class Coin {
-	int side;
+	int side,serialNo;
+	static int sno;
 	Coin(int side) {
 		this.side = side;
+		serialNo = ++sno;
 	}
 	void flip() {
 		side = (int)(Math.random() * 2);
 	}
 	public String toString() {
-		return (side==0)?"앞면":"뒷면";
+		return serialNo + "번 동전 : " + ((side==0)?"앞면":"뒷면");
 	}
 }
 
 public class Test02_A {
 	public static void main(String[] args) {
-		Coin[] arr = new Coin[10];
+		Coin[] arr = new Coin[10];  //Coin 참조변수의 배열
 		int[] cnt1 = new int[2];
 		int[] cnt2 = new int[2];
 		for(int i=0;i<arr.length;i++) {
-			arr[i] = new Coin((int)(Math.random() * 2)); 
+			//Coin((int)(Math.random() * 2)) : Coin(int)
+			arr[i] = new Coin((int)(Math.random() * 2)); //Coin 객체 생성 
 			System.out.println("Coin 객체 생성 :" + arr[i]);
-			cnt1[arr[i].side]++;
-			arr[i].flip();
+			cnt1[arr[i].side]++; // side : 0 인경우 cnt1[0] 증가 => 앞면의 갯수
+			                     // side : 1 인경우 cnt1[1] 증가 => 뒷면의 갯수
+			arr[i].flip(); //동전의 side를 변경
 			System.out.println("flip() 실행 후 :" + arr[i]);
-			cnt2[arr[i].side]++;
+			cnt2[arr[i].side]++; //flip 이후의 동전 side 갯수
 		}
 		System.out.println("생성 후 앞면 동전의 갯수 :" + cnt1[0]);
 		System.out.println("생성 후 뒷면 동전의 갯수 :" + cnt1[1]);	

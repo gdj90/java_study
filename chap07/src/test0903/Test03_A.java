@@ -26,9 +26,9 @@ class Animal {
 
 public class Test03_A {
 	public static void main(String[] args) {
-		Animal a1 = new Animal("원숭이", 26);
-		Animal a2 = new Animal("사자");
-		Animal a3 = new Animal(100);
+		Animal a1 = new Animal("원숭이", 26); //원숭이 26살
+		Animal a2 = new Animal("사자");      //사자 1살 
+		Animal a3 = new Animal(100);        //사람 100살
 		a1.info();
 		a2.info();
 		a3.info();

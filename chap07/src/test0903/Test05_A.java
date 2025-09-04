@@ -26,42 +26,46 @@ package test0903;
 */
 
 import java.util.Date;
+
 class Employee {
-	String type,name,address,dept;
-	Employee(String type, String name, String address, String dept) {
+	String type, name, address, dept;
+	public Employee(String type, String name, String address, String dept) {
 		this.type = type;
 		this.name = name;
 		this.address = address;
-		this.dept =dept;
+		this.dept = dept;
 	}
+	@Override
 	public String toString() {
-		return type+":이름="+name+", 주소="+address + ",부서="+dept;
+		return type+": 이름="+name+", 주소="+address+", 부서="+dept;
 	}
 }
 class FormalEmployee extends Employee {
-	String empNo;
-	String position;
+	String empNo,position;
 	int salary;
-	FormalEmployee (String name, String address, 
-			String dept, String empNo,int salary,String position ) {
-		super("정규직",name,address,dept); //Employee 생성자 호출
+	//("김정규", "서울시 용산구","총무부", "1", 5000, "과장")
+	FormalEmployee(String name, String address, String dept, 
+			String empNo, int salary, String position){
+		super("정규직",name,address,dept);
 		this.empNo = empNo;
+		this.position = position;
 		this.salary = salary;
-		this.position = position;		
 	}
 	int getPay() {
-		return salary/12;
+		return salary / 12;
 	}
+	@Override
 	public String toString() {
-		return super.toString()+
-				",직원번호="+empNo+",직급="+position+",연봉="+salary;
+		return  super.toString() +
+		",직원번호=" + empNo + ", 직급=" + position + ", 연봉=" + salary;
 	}
 }
 class InformalEmployee extends Employee {
 	Date expireDate;
 	int primaryPay;
-	InformalEmployee(String name, String address, String dept,
-			Date expireDate,int primaryPay){
+	//("이비정", "서울시 구로구", "영업부", expireDate, 1000)
+	InformalEmployee(String name, String address, String dept, 
+			Date expireDate, int primaryPay){
 		super("비정규직",name,address,dept);
 		this.expireDate = expireDate;
 		this.primaryPay = primaryPay;
@@ -69,13 +73,12 @@ class InformalEmployee extends Employee {
 	int getPay() {
 		return primaryPay;
 	}
+	@Override
 	public String toString() {
-		return super.toString()+
-				",계약만료일="+expireDate+",기본입금="+primaryPay;
+		return super.toString() + 
+				",계약만료일=" + expireDate + ", 기본임금=" + primaryPay;
 	}
 }
-
-
 public class Test05_A {
 	public static void main(String[] args) {
 		//정규직원 객체 생성

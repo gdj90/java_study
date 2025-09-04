@@ -25,12 +25,12 @@ class Student {
 	Student(String name, int studno) {
 		this(name,studno,0,0,0);
 	}
-	Student(String n, int s,int k, int e, int m) {
-		this.name = n; //이름
-		studno = s; //학번
-		kor = k;    //국어점수
-		eng = e;    //영어점수
-		math = m;   //수학점수
+	Student(String name, int studno,int kor, int eng, int math) {
+		this.name = name; //이름
+		this.studno = studno; //학번
+		this.kor = kor;    //국어점수
+		this.eng = eng;    //영어점수
+		this.math = math;   //수학점수
 	}
 	int getTotal() {
 		return kor + eng+math;

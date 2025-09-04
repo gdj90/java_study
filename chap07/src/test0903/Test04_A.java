@@ -14,38 +14,49 @@ package test0903;
  *         1번원 : 반지름:10, 좌표:(10,10), 넓이:314.xxx, 둘레:xxx.xxx
  *         ... */
 class Circle {
-	int r,x,y,sno;
-	static int cnt;
-	Circle(int r, int x, int y) {
+	int r,x,y,no;
+	static int count;
+	
+	public Circle(int r, int x, int y) {
 		this.r = r;
 		this.x = x;
 		this.y = y;
-		sno = ++ cnt;
+		no = ++count;
 	}
-	Circle(int x, int y) {
+	public Circle(int x, int y) {
 		this(1,x,y);
 	}
-	Circle(int r) {
+	public Circle(int r) {
 		this(r,0,0);
 	}
-	void move(int a, int b) {
-		x += a;
-		y += b;
+	void move(int x, int y) {
+		this.x += x;
+		this.y += y;
 	}
 	void scale(int m) {
-		r *= m;
+		this.r *= m;
 	}
 	double area() {
-		return Math.PI * r * r;
+		return Math.PI * r * r ;
 	}
 	double length() {
 		return Math.PI * r * 2;
 	}
+//	@Override
+//	public String toString() {
+//		return no + "번원 : 반지름:" + r + 
+//				 ", 좌표:(" + x + "," + y+"), 넓이:" 
+//				+ area() + ", 둘레:" + length(); 
+//	}
+	//소숫점이하 3자리까지만 출력하기
+	@Override
 	public String toString() {
-		return sno + "번원 : 반지름:" + r + 
-				 ", 좌표:(" + x + "," + y+"), 넓이:" 
-				+ area() + ", 둘레:" + length(); 
+		//%d : 10진정수(byte,short,int,long), %f : 실수(float,double)
+		return String.format
+				("%d번원 : 반지름:%d, 좌표(%d,%d),넓이:%.3f, 둘레:%.3f",
+						no,r,x,y,area(),length()); 
 	}
+	
 }
 
 public class Test04_A {
