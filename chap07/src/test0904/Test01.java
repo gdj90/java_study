@@ -9,7 +9,7 @@ package test0904;
    Snack 클래스 : Food 클래스의 하위 클래스
    과일 클래스는 당도(brix)를, 음료는 용량(ml), 과자는 무게(gram)을 멤버로 가진다
    과일의 종류로는 사과(Apple),복숭아(Peach),
-   음료의 종류로는 콜라(Cock) 와 사이다(Sidar)
+   음료의 종류로는 콜라(Coke) 와 사이다(Cider)
    과자의 종류로는 비스킷(Biscuit)과 쿠키(Cookie) 가 있다.
    사과,복숭아, 콜라, 사이다,비스킷,쿠키 클래스에 toString() 메서드를 구현하고
    각각의 이름을 리턴한다.
@@ -57,14 +57,14 @@ public class Test01 {
 	public static void main(String ... args) {
 		Apple apple = new Apple(1000,10.5);//가격, 당도(brix)
 		Peach peach = new Peach(1000,13.5);//가격, 당도(brix)
-		Cock coke = new Cock(500,500);   //가격, 용량(ml)
-		Sidar cidar = new Sidar(1500,1000);//가격, 용량(ml)
+		Coke coke = new Coke(500,500);   //가격, 용량(ml)
+		Cider cider = new Cider(1500,1000);//가격, 용량(ml)
 		Biscuit bis = new Biscuit(10000,500);//가격, 무게(gram)
 		Cookie cookie = new Cookie(500,5000);//가격, 무게(gram)
 		
 		Buyer b = new Buyer();
 		b.buy(apple);		b.buy(peach);
-		b.buy(coke);		b.buy(cidar);
+		b.buy(coke);		b.buy(cider);
 		b.buy(bis);  		b.buy(cookie);
 		System.out.println("고객 잔액:" + b.money);
 		System.out.println("고객 포인트:" + b.point);
