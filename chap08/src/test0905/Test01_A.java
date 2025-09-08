@@ -33,7 +33,7 @@ abstract class Employee{
 		this.addr = addr;
 		this.dept = dept;
 	}
-	abstract long getPay();
+	abstract  long getPay();
 }
 class FormalEmployee extends Employee {
 	String empno;

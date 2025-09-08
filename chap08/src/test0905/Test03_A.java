@@ -7,6 +7,7 @@ DanceRobot은 춤을 춤니다.
 SingRobot은 노래를 부릅니다.
 DrawRobot은 그림을 그립니다.
  */
+/*
 interface Robot {
 	void action();
 }
@@ -28,6 +29,7 @@ class DrawRobot implements Robot {
 		System.out.println("DrawRobot은 그림을 그립니다.");
 	}
 }
+*/
 public class Test03_A {
 	public static void main(String[] args) {
 		Robot[] robot = new Robot[3];
