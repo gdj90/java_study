@@ -14,33 +14,21 @@ Audio를 끕니다.
 무음을 해제합니다.
 건전지를 교환합니다.
 */
-/*
 interface RemoteControl {
+	void turnOn();
+	void setVolume(int i);
+	void turnOff();
+	default void setMute(boolean b) {
+		if (b)
+		   System.out.println("무음 처리합니다.");
+		else
+		   System.out.println("무음을 해제합니다.");
+	}
+	static void changeBattery() {
+		System.out.println("건전지를 교환합니다.");
+	};
 }
-*/
-class Television implements RemoteControl{
-	public void turnOn() {
-		System.out.println("TV를 켭니다.");
-	}
-	public void turnOff() {
-		System.out.println("TV를 끕니다.");
-	}
-	public void setVolume(int volumn) {
-		System.out.println("Tv의 볼륨을 "+volumn+"으로 설정합니다.");
-	}
-}
-class Audio implements RemoteControl{
-	public void turnOn() {
-		System.out.println("Audio를 켭니다.");
-	}
-	public void turnOff() {
-		System.out.println("Audio를 끕니다.");
-	}
-	public void setVolume(int volumn) {
-		System.out.println("Audio의 볼륨을 "+volumn+"으로 설정합니다.");
-	}
-}
-public class Test01 {
+public class Test01_A {
 	public static void main(String[] args) {
 		RemoteControl rc = new Television();
 		rc.turnOn(); //TV를 켭니다.

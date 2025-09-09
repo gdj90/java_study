@@ -9,10 +9,7 @@ package test0905;
  * arr 배열의 최대값:10
  * arr 배열의 최소값:1
  */
-interface LambdaInterface1 {
-	int method(int x, int y);
-}
-public class Test02 {
+public class Test02_A {
 	public static void main(String[] args) {
 		LambdaInterface1 f;
 		f=(x,y)-> x+y;	
@@ -26,13 +23,15 @@ public class Test02 {
 		System.out.println("arr 배열의 최소값:" + calc(arr,f));//1
 	}
 
-	private static String calc(int[] arr, LambdaInterface1 f) {
-		// TODO Auto-generated method stub
-		return null;
+	private static int calc(int i, int j, LambdaInterface1 f) {
+		return f.method(i,j);
 	}
 
-	private static String calc(int i, int j, LambdaInterface1 f) {
-		// TODO Auto-generated method stub
-		return null;
+	private static int calc(int[] arr, LambdaInterface1 f) {
+		int maxmin=arr[0];
+		for(int a : arr) {
+			maxmin = f.method(maxmin, a);
+		}
+		return maxmin;
 	}
 }
