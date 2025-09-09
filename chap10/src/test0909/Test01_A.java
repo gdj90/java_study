@@ -37,8 +37,10 @@ package test0909;
 16
 정답입니다. 입력 횟수:8
 */
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
-public class Test01 {
+public class Test01_A {
 	public static void main(String[] args) {
 		//1~100 사이의 임의의 수
 		int answer = (int)(Math.random() * 100) + 1;
