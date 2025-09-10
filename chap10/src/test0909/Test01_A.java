@@ -44,34 +44,33 @@ public class Test01_A {
 	public static void main(String[] args) {
 		//1~100 사이의 임의의 수
 		int answer = (int)(Math.random() * 100) + 1;
-		int cnt = 0;
+		int cnt = 0; //입력횟수
 		System.out.println("1부터 100까지의 숫자를 입력하세요");
 		Scanner scan = new Scanner(System.in);
 		while(true) {
 			int num = 0;  //while 블럭에서만 사용 가능한 지역변수
 			try {
-			 num = scan.nextInt();
-			 cnt++;
+			 num = scan.nextInt(); //InputMismatchException 예외 발생 가능성
+			 cnt++; //입력 횟수 증가
 			 if(num < 1 || num > 100) 
-				 throw new NumberInputException 
+				 throw new NumberInputException //예외 강제 발생
 				       ("1부터 100까지의 숫자만 입력하세요");
 			} catch(InputMismatchException e) {
 				String d = scan.next();
-				cnt++;
+				cnt++; //숫자가 아닌 경우도 입력 횟수 증가
 				System.out.println(d + "는 숫자가 아닙니다.");
-				continue;
+				continue;  //반복문의 처음 실행
 			} catch(NumberInputException e) {
 				System.out.println(e.getMessage());
 				continue;
 			}
+			//1 ~ 100사이의 숫자를 입력한 경우 실행
 			if(num == answer) break;
 			else if(num > answer) 
 				System.out.println("작은수를 입력하세요");
 			else 
 				System.out.println("큰수를 입력하세요");
 		}
-		System.out.println("정답입니다. 입력 횟수:" + cnt);		
-		
-
+		System.out.println("정답입니다. 입력 횟수:" + cnt);
 	}
 }
