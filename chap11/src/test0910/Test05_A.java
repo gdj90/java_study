@@ -8,6 +8,7 @@ package test0910;
 public class Test05_A {
 	public static void main(String[] args) {
 		String str = "1,234";
+		//str.replace(",","") : ,를 빈문자열로 변경. , 제거
 		int num = Integer.parseInt(str.replace(",",""));
 		System.out.println(num);
 		System.out.println(String.format("%,d", num*10));

@@ -17,8 +17,11 @@ public class Test04_A {
 		String[] arr1 = s1.split("-");
 		String[] arr2 = s2.split(",");
 		for(int i=0;i<arr1.length;i++) 
-			System.out.printf("%s=>%s\n",arr1[i],arr2[i].trim());
+//			System.out.printf("%s=>%s\n",arr1[i],arr2[i].trim());
+			System.out.println(arr1[i] + "=>" + arr2[i].trim());
 		System.out.println("============");
+		//\\s*,\\s* : 정규식 표현. \s:공백한개   \s*:공백 0개 이상 
+		//            , 앞뒤에 공백까지를 분리문자로 설정
 		arr2 = s2.split("\\s*,\\s*");
 		for(int i=0;i<arr1.length;i++) 
 			System.out.printf("%s=>%s\n",arr1[i],arr2[i]);		

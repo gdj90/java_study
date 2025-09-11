@@ -5,7 +5,7 @@ package test0910;
  */
 public class Test03_A {
 	public static void main(String[] args) {
-		indexOf("12345AB12AB45AB", "12");  //12:0,7
+		indexOf("12345AB12AB45AB12", "12");  //12:0,7
 		indexOf("12345AB12AB45AB", "AB");  //AB:5,9,13
 		indexOf("12345", "AB");            //AB : 없음
 	}

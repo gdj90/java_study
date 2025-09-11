@@ -28,10 +28,10 @@ public class Test06_A {
 		for (int i = 0; i < len; i++) {
 			sb.append(" ");
 		}
-		int l = len - str.length(); 
+		int l = len - str.length(); //남는 공백 갯수
 		switch (align) {
-		 case 0:sb.replace(0, str.length(), str);break;
-		 case 1:sb.replace(l/2,str.length()+l/2, str);break;
+		 case 0:sb.replace(0, str.length(), str);break; //왼쪽정렬
+		 case 1:sb.replace(l/2,str.length()+l/2, str);break; //가운데 정렬
 		 case 2:sb.replace(l,str.length()+l, str);break;
 		}
 		return sb.toString();
