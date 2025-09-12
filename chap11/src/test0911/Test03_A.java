@@ -26,7 +26,6 @@ public class Test03_A {
 		Date sdate = sf.parse(second);
 		
 		long datecnt = (sdate.getTime() - fdate.getTime())/(1000L*60*60*24);
-//		long datecnt = (fdate.getTime() - sdate.getTime())/(1000L*60*60*24);
 		System.out.printf("%s -%s 일자의 차이 : %d\n",second,first,datecnt);
 	}
 }

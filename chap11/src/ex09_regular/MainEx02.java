@@ -5,7 +5,9 @@ import java.util.regex.Pattern;
 
 public class MainEx02 {
 	public static void main(String[] args) {
-		String[] patterns = {".","[a-z]?","[0-9]+","^[0-9]"};
+		String[] patterns = {".","[a-z]?","[0-9]+","^[0-9]",
+				"[a-z]*","[a-z]+","02|010",
+				"\\s","\\S","\\d","\\D","\\w","\\W"};
 		String[] datas = 
 			{"","a","1","12","012","abc","02"," ","A","5","*","010"};
 		for(String s : datas) {

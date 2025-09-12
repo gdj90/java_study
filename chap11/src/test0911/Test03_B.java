@@ -1,9 +1,7 @@
 package test0911;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Scanner;
 
 /*
@@ -26,12 +24,20 @@ public class Test03_B {
 		String[] sarr = second.split("-");
 		Calendar fcal = Calendar.getInstance();
 		Calendar scal = Calendar.getInstance();
-		fcal.set(Integer.parseInt(farr[0]),Integer.parseInt(farr[1]) - 1,Integer.parseInt(farr[2]));
-		scal.set(Integer.parseInt(sarr[0]),Integer.parseInt(sarr[1]) - 1,Integer.parseInt(sarr[2]));
-		System.out.println(fcal.get(Calendar.HOUR_OF_DAY) + ","+scal.get(Calendar.HOUR_OF_DAY));
-		System.out.println(fcal.get(Calendar.MINUTE) + ","+scal.get(Calendar.MINUTE));
-		System.out.println(fcal.get(Calendar.SECOND) + "," +scal.get(Calendar.SECOND));
-		System.out.println(fcal.get(Calendar.MILLISECOND) + "," + scal.get(Calendar.MILLISECOND));
+		fcal.set(Integer.parseInt(farr[0]),
+				 Integer.parseInt(farr[1]) - 1,
+				 Integer.parseInt(farr[2]));
+		scal.set(Integer.parseInt(sarr[0]),
+				 Integer.parseInt(sarr[1]) - 1,
+				 Integer.parseInt(sarr[2]));
+		System.out.println
+		(fcal.get(Calendar.HOUR_OF_DAY) + ","+scal.get(Calendar.HOUR_OF_DAY));
+		System.out.println
+		(fcal.get(Calendar.MINUTE) + ","+scal.get(Calendar.MINUTE));
+		System.out.println
+		(fcal.get(Calendar.SECOND) + "," +scal.get(Calendar.SECOND));
+		System.out.println
+	(fcal.get(Calendar.MILLISECOND) + "," + scal.get(Calendar.MILLISECOND));
 		long datecnt = (fcal.getTimeInMillis() - scal.getTimeInMillis())/(1000L*60*60*24);
 //		long datecnt = (scal.getTimeInMillis() - fcal.getTimeInMillis())/(1000L*60*60*24);
 		System.out.printf("%s -%s 일자의 차이 : %d\n",second,first,datecnt);

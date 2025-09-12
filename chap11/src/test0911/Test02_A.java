@@ -28,7 +28,8 @@ public class Test02_A {
 		//입력한년월의 마지막일자
 		int lastday = cal.getActualMaximum(Calendar.DATE); 
 		System.out.println("\t"+year + "년 " + mon + "월");
-		System.out.printf("%3c %3c %3c%3c %3c%3c %3c",'일','월','화','수','목','금','토');
+		System.out.printf
+		("%3c %3c %3c%3c %3c%3c %3c",'일','월','화','수','목','금','토');
 		System.out.println();
 		//1부터 lastday 까지 반복
 		for(int i=1,day=1;day<=lastday;i++) {
@@ -37,6 +38,5 @@ public class Test02_A {
 			else System.out.printf("%4d",day++);
 			if(i%7==0)System.out.println();
 		}
-
 	}
 }

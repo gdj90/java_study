@@ -20,14 +20,18 @@ public class Test01_A {
 		for(int i=0;i<20;i++) {
 			System.out.print(getRand(-1,3)+",");
 		}
+		System.out.println();
+		for(int i=0;i<20;i++) {
+			System.out.print(getRand(1,10)+",");
+		}
 	}
 	// 1 ~ 10사이의     1 <=  (Math.random() * 10) + 1 <= 10
 	// 2 ~ 10사이의     2 <=  (Math.random() * 9) + 2 <= 10
 	static int getRand(int f,int t) {
 //		int min = Math.min(f,t);
-		int min = (f<t)?f:t; 
+		int min = (f<t)?f:t; //범위의 시작값
 //		int max = Math.max(f,t);
-		int max = (f>t)?f:t; 
+		int max = (f>t)?f:t; //범위의 끝값
 		int cha = max - min ; //범위. 
 //		return (int)(Math.random() * (cha+1)) + min;
 		Random r = new Random();
