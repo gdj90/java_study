@@ -1,6 +1,6 @@
 package test0912;
 /*
- * 찾고자 하는 번호의 일부를 입력받아 번호를 출력하기. 
+ * 찾고자 하는 번호의 일부를 입력받아 번호를 출력하기. : q가 입력될때까지 계속 입력받기
  * [결과]
  * 찾는 번호의 일부를 입력하세요(종료:q):
  * 3456
@@ -23,7 +23,9 @@ public class Test01_B {
 			String input = s.nextLine().trim();
 			if (input.equals(""))
 				continue;
-			else if (input.equalsIgnoreCase("Q"))break;
+			//input.equalsIgnoreCase(문자열) : 
+			// input데이터와 문자열이 대소문자 구분없이 같은 내용? 
+			else if (input.equalsIgnoreCase("Q")) break;
 			String pattern = input;
 			Pattern p = Pattern.compile(pattern);
 			int cnt = 0;

@@ -27,7 +27,7 @@ public class Test01_A {
 			String phoneNum = phoneNumArr[i];
 			String tmp = phoneNum.replace("-", ""); //- 제외시켜, -사이의 숫자 검색
 			Matcher m = p.matcher(tmp);
-			if (m.find()) { 
+			if (m.find()) {  //tmp 에서 pattern 이 존재?
 				cnt++;
 				System.out.println(cnt + ":" + phoneNum);
 			}

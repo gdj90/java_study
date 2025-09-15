@@ -53,8 +53,10 @@ public class Test04_A {
 		System.out.println(list + "의 합:" + sum);
 		System.out.println("홀수의 최대값:" + Collections.max(list));
 		System.out.println("홀수의 최소값:" + Collections.min(list));
-		System.out.println("홀수의 최대값 위치:" + list.indexOf(Collections.max(list)));
-		System.out.println("홀수의 최소값 위치:" + list.indexOf(Collections.min(list)));
+		System.out.println("홀수의 최대값 위치:" + 
+		                      list.indexOf(Collections.max(list)));
+		System.out.println("홀수의 최소값 위치:" + 
+		                      list.indexOf(Collections.min(list)));
 		System.out.println("입력된 홀수 목록:" + list);
 		Collections.sort(list);
 		System.out.println(list);
