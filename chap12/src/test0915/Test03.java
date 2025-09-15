@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 /*
- * MainEx02의 예제를 이용하기
+ * ex03_map.MainEx02의 예제를 이용하기
  *
  * 조회를 입력했을 경우
  * 제목,저자,가격순으로 정렬 되어 조회되도록 프로그램 수정하기
