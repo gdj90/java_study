@@ -20,8 +20,8 @@ import java.util.TreeSet;
 
 public class Test02_A {
 	public static void main(String[] args) {
-	     TreeSet<Integer> set1 = new TreeSet<Integer>();
-		 TreeSet<Integer> set2 = new TreeSet<Integer>
+	     TreeSet<Integer> set1 = new TreeSet<Integer>(); //기본정렬방식
+		 TreeSet<Integer> set2 = new TreeSet<Integer>    //기본정렬방식의 역순
 		                            (Comparator.reverseOrder());
 	     Scanner scan = new Scanner(System.in);
 	     System.out.println("1부터 99까지의 숫자를 입력하세요 (종료 : 0)");
@@ -35,6 +35,7 @@ public class Test02_A {
 	     	 }
 	    	 if(num == 0) break;
 	    	 if(num < 1 || num > 99) continue;
+	    	 //1 ~ 99사이의 숫자인 경우만 실행
 	    	 set1.add(num);
 	    	 set2.add(num);
 	     }

@@ -35,8 +35,9 @@ public class Test01_B {
 	public static void main(String[] args) {
 		List<Integer> list = new ArrayList<>();
 		for(int i=1;i<=1000;i++) {
-			list.add(i);
-		}
+			list.add(i);  //list 객체 : 1 ~ 1000까지의 수를 저장 객체
+		}                 //list.size() = 1000
+		//Collections.shuffle(list) : list의 객체 섞어주기
 		Collections.shuffle(list);
 		List<Integer> list3 = new ArrayList<>(list.subList(0, 3));
 		System.out.println("3등 복권 추첨합니다.");

@@ -38,7 +38,8 @@ public class Test01_A {
 	public static void main(String[] args) {
 		Set<Integer> set = new LinkedHashSet<>();
 		Random rand = new Random();
-		rand.setSeed(System.currentTimeMillis());
+		//System.currentTimeMillis() : 1970년 이후부터 현재까지의 밀리초
+		rand.setSeed(System.currentTimeMillis()); //seed값 설정
 		while (set.size() < 6) {
 			if (set.size() == 0)
 				System.out.println("\n3등 복권 추첨합니다.");
@@ -46,14 +47,15 @@ public class Test01_A {
 				System.out.println("\n2등 복권 추첨합니다.");
 			else if (set.size() == 5)
 				System.out.println("\n1등 복권 추첨합니다.");
-			int num = rand.nextInt(1000) + 1;
-			if (set.add(num)) {
+			int num = rand.nextInt(1000) + 1; //1 ~ 1000 사이의 임의의 수
+			if (set.add(num)) { //true : 중복없이 set객체 추가 성공
 				System.out.print(num + ",");
 			}
 		}
+		//set 객체: 1 ~ 1000까지의 숫자 중 서로다른 6개의 숫자를 저장 
 		System.out.println();
 		System.out.println("*** 복권 추첨 결과 ***");
-		List<Integer> list = new ArrayList<>(set);
+		List<Integer> list = new ArrayList<>(set);  //List 객체 <= Set 객체
 		for (int i = list.size() - 1; i >= 0; i--) {
 			if (i == list.size() - 1)
 				System.out.println("1등:" + list.get(i));
@@ -67,7 +69,7 @@ public class Test01_A {
 				System.out.print(list.get(i) + ",");
 		}
 		System.out.println("\n===========");
-		List<Integer> list2 = list.subList(5, 6);
+		List<Integer> list2 = list.subList(5, 6); //1등 번호
 		Collections.sort(list2);
 		System.out.println("1등:" + list2);
 		list2 = list.subList(3, 5);
