@@ -1,5 +1,7 @@
 package test0916;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 
 /*
  bin/ex01_inputstream/MainEx01_inputstream.class 파일은 이진 파일이다. 
@@ -13,7 +15,16 @@ CA FE BA BE 00 00 00 34 00 8E 07 00 02 01 00 17
 3C 69 6E 69 74 3E 01 00 03 28 29 56 01 00 04 43 
 6F 64 65 0A 00 03 00 09 0C 00 05 00 06 01 00 0F 
 .... */
-public class Test02 {
-	public static void main(String[] args)  {
+public class Test02_A {
+	public static void main(String[] args) throws IOException  {
+		FileInputStream fis =new FileInputStream("bin/ex01_inputstream/MainEx01_inputstream.class");
+		byte[] buf = new byte[16];
+		int len;
+		while ((len = fis.read(buf)) != -1) {
+			for (int i = 0; i < len; i++)
+				System.out.printf(" %02X", buf[i]);
+			System.out.println();
+		}
+		
 	}
 }
