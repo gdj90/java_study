@@ -17,6 +17,5 @@ public class Test04_A {
 			fos.write(buf,0,len);
 		}
 		System.out.println("apple.gif 파일 복사완료");
-
 	}
 }

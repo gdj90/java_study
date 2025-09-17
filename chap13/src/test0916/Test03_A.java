@@ -23,17 +23,18 @@ bbb.txt
 exit
 */
 public class Test03_A {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException  {
 		Scanner scan = new Scanner(System.in);
 		while(true) {
 			System.out.println("파일명을 입력하세요(종료:exit)");
 			String filename = scan.next();
-			if(filename.equals("exit")) break;
-			int lastdot = filename.lastIndexOf(".");
+			if(filename.equals("exit")) break; //aaa.txt => aaa.bak
+			int lastdot = filename.lastIndexOf("."); //. 인덱스값
 			String bakfile=null;
 			if (lastdot  < 0) //확장자가 없는 이름의 파일인 경우
 				 bakfile =filename + ".bak";
-			else bakfile =filename.substring(0,lastdot)+".bak";
+			//filename.substring(0,lastdot) : 확장자 앞부분 aaa.txt => aaa
+			else bakfile =filename.substring(0,lastdot)+".bak"; //aaa.bak
 			
 			FileInputStream fis = null;
 			FileOutputStream fos = null;
@@ -55,7 +56,6 @@ public class Test03_A {
 				if(fis != null) fis.close();
 				if(fos != null) fos.close();
 			}
-	}
-
+		}
 	}
 }

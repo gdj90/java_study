@@ -30,7 +30,6 @@ public class Test01_A {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		}
-		
+		}		
 	}
 }

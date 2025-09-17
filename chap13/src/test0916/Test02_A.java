@@ -17,7 +17,8 @@ CA FE BA BE 00 00 00 34 00 8E 07 00 02 01 00 17
 .... */
 public class Test02_A {
 	public static void main(String[] args) throws IOException  {
-		FileInputStream fis =new FileInputStream("bin/ex01_inputstream/MainEx01_inputstream.class");
+		FileInputStream fis =new FileInputStream
+				  ("bin/ex01_inputstream/MainEx01_inputstream.class");
 		byte[] buf = new byte[16];
 		int len;
 		while ((len = fis.read(buf)) != -1) {
