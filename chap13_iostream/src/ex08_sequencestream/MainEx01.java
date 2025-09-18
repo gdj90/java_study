@@ -8,6 +8,10 @@ import java.io.SequenceInputStream;
 /*
  * SequenceInputStream : 여러개의 InputStream을 하나의 InputStream으로 연결하여
  *                       처리 할수 있는 Stream
+ *    new  SequenceInputStream(InputStream, InputStream) 
+ *      => 2개의 InputStream을 연결                  
+ *    new  SequenceInputStream(Enumeration) 
+ *      => 여러개의 InputStream을 연결                  
  */
 public class MainEx01 {
 	public static void main(String[] args) throws IOException {
