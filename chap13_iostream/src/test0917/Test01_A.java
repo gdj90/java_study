@@ -24,19 +24,21 @@ import java.io.InputStreamReader;
  */
 public class Test01_A {
 	public static void main(String[] args) throws IOException  {
-		BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
+		//stdin : 출발지는 키보드. 표준입력 
+		BufferedReader stdin = new BufferedReader
+				         (new InputStreamReader(System.in));
 		System.out.println("파일명을 입력하세요");
-		String filename = stdin.readLine();
+		String filename = stdin.readLine(); //키보드에서 한줄 입력
 		System.out.println("시작라인");
-		String stl = stdin.readLine();
+		String stl = stdin.readLine(); //시작라인의 값을 문자열로 입력
 		System.out.println("라인수");
-		String snum = stdin.readLine();
+		String snum = stdin.readLine(); //라인수의 값을 문자열로 입력
 		//시작라인과 라인수 정수형 변경하기
 		int start = Integer.parseInt(stl);  //시작라인
 		int len = Integer.parseInt(snum);   //출력할 라인수
 		//파일 읽기
 		BufferedReader br = new BufferedReader(new FileReader(filename));
-		String data = null;
+		String data = null; //파일에서 읽은 한줄 데이터. 
 		int line=0,cnt=0; //line:라인수, cnt:출력한 라인수
 		while((data=br.readLine()) != null) {
 			++line;
@@ -47,6 +49,5 @@ public class Test01_A {
 		}
 		br.close();
 		stdin.close();
-		
 	}
 }

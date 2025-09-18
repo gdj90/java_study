@@ -26,20 +26,19 @@ public class Test02_A {
 	public static void main(String[] args) throws IOException {
 		String filename = null;
 		try {
-		   filename = args[0];
+		   filename = args[0]; 
 		} catch (ArrayIndexOutOfBoundsException e) {
 			filename = "noname.txt";
 		}
 		FileWriter fw = new FileWriter(filename);
 		BufferedReader br = new BufferedReader(
 				new InputStreamReader(System.in));
-		System.out.println("문자열 입력");
+		System.out.println(filename + "에 저장할 내용을 입력하세요");
 		while(true){
 			String msg = br.readLine();
 			if(msg.equals("exit")) break;
 			fw.write(msg+"\n");
 		}
-		fw.close();		
-
+		fw.close();	
 	}
 }
