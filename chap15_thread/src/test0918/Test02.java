@@ -3,7 +3,7 @@ import java.util.function.IntBinaryOperator;
 import java.util.function.IntPredicate;
 
 /*
- * 1에서 100까지의 임의의 수 10를 저장한 배열에서
+ * 1에서 100까지의 임의의 수 10개를 저장한 배열 arr에서
  * IntBinaryOperator 인터페이스와 IntPredicate 인터페이스를 이용하여
  * 배열에 저장된 짝수,홀수별 최대 숫자와 최소 숫자를 출력하기
  */
