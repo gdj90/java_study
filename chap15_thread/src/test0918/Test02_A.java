@@ -10,6 +10,7 @@ import java.util.function.IntPredicate;
 public class Test02_A {
 	private static int[] arr = new int[10];
 	public static void main(String[] args) {
+		//1 ~ 100사이의 임의의 수 10개를 arr 배열에 저장
 		for(int i=0; i<arr.length; i++) {
 			arr[i]= (int)(Math.random()*100)+1;
  		    System.out.print(arr[i]+",");

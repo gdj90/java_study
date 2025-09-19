@@ -19,7 +19,7 @@ Exam 관련 모든 소스 : ExamXXX.java
 
 public class Test01_A {
 	
-	static Vector<InputStream> vector = new Vector();
+	static Vector<InputStream> vector = new Vector<>();
 
 	public static void main(String[] args) throws IOException {
 		System.out.println("프로그램 시작");

@@ -31,15 +31,16 @@ public class Test04_A {
 		Thread[] tarr = new Thread[5];
 		for(int i=0;i<arr.length;i++) {
 			arr[i] = new SumRunnable(i*200+1, (i+1)*200);
-			tarr[i] = new Thread(arr[i]);
-			tarr[i].start();
+			tarr[i] = new Thread(arr[i]);  //Thread 객체 생성
+			tarr[i].start();  //Runnable 상태
 		}
 		int sum = 0;
 		for(Thread t : tarr) {
 			try {
-				t.join();
+				t.join(); //Thread 가 종료까지 main 대기
 			} catch (InterruptedException e) {}
 		}
+		//모든 Thread가 종료상태인 경우 실행됨
 		for(SumRunnable r : arr) sum += r.sum;
 		System.out.println("1 ~ 1000까지의 합:" + sum);
 	}
